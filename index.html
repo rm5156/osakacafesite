@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>大阪カフェ一覧（詳細付き）</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+  ...
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <h1>大阪府の美味しいカフェ一覧</h1>
+
+    <!-- 検索バー -->
+    <input type="text" id="search-input" placeholder="店名や住所で検索">
+
+    <!-- 市区町村で絞り込み -->
+    <select id="area-filter">
+        <option value="">すべてのエリア</option>
+        <option value="大阪市北区">大阪市北区</option>
+        <option value="大阪市中央区">大阪市中央区</option>
+        <option value="枚方市">枚方市</option>
+    </select>
+
+    <!-- 評価順ソート -->
+    <select id="sort-filter">
+        <option value="none">ソートなし</option>
+        <option value="asc">評価が低い順</option>
+        <option value="desc">評価が高い順</option>
+    </select>
+
+    <div id="cafe-list"></div>
+
+  <!-- ポップアップ -->
+<div id="popup" class="hidden">
+    <div id="popup-content">
+        <span id="close-popup">&times;</span>
+        <h2 id="popup-name"></h2>
+        <img id="popup-image" src="" alt="喫茶店写真">
+        <p id="popup-address"></p>
+        <p id="popup-rating"></p>
+        <p id="popup-hours"></p>
+        <p id="popup-menu"></p>
+        <p id="popup-note"></p>
+
+        <!-- SNSリンクを入れる場所（追加！） -->
+        <div id="popup-sns"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
